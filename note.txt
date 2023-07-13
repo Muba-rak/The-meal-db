@@ -1,0 +1,45 @@
+// package installation
+react-router-dom done
+react-bootstrap bootstrap done
+React-player
+react-icons
+
+//app clean up
+setup React router
+Homepage done
+About done
+Single mEal page done
+Error page done
+
+//Navbar
+// ABout and error page
+
+// functionalities
+
+// fatch our data 
+// loading state
+// data
+
+// setFoods(data.meals)
+
+// setFoods([])
+if(food.length < 1){
+    <h1Sorry, no food fouund></h1>
+}
+return {
+    
+}
+
+if (data.meals) {
+    const {
+      strMeal: name,
+      strCategory: cat,
+      strArea: area,
+      strInstructions: instructions,
+      strMealThumb: image,
+      strYoutube: youtube,
+      strTags: tags,
+    } = data.meals[0];
+    const newMeal = { name, image };
+    setMeal(meal);
+  }
