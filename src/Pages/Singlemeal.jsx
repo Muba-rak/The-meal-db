@@ -98,7 +98,7 @@ const Singlemeal = () => {
               controls={true}
               playing={true}
               muted={true}
-              width={"300px"}
+              width={"100%"}
             />
           </div>
         </div>
