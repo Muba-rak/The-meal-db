@@ -16,12 +16,16 @@ const MealList = () => {
       {foods.map((food) => {
         const { id, name, image, cat } = food;
         return (
-          <Link to={`/meal/${id}`} className="text-decoration-none" key={id}>
+          <Link
+            to={`/meal/${id}`}
+            className="text-decoration-none my-3 mx-auto"
+            key={id}
+          >
             <div
-              style={{ width: "300px" }}
-              className="shadow shadow-lg card my-3 mx-auto rounded-2"
+              style={{ width: "280px" }}
+              className="shadow shadow-lg card rounded-2"
             >
-              <img src={image} alt={name} className="rounded-top-2" />
+              <img src={image} alt={name} className="rounded-top-2 w-100" />
               <h4 className="text-success fw-bold text-center mt-3">
                 {" "}
                 {name}{" "}

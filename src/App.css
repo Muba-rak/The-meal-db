@@ -1,3 +1,11 @@
 .about-section{
     height:  70vh;
 }
+
+.banner{
+    background-image: url('./assets/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70vh;
+}
+
