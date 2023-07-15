@@ -12,7 +12,7 @@ const Header = () => {
         <Container>
           <Navbar.Brand className=" fs-4 fw-bold">
             <Link to="/" className="text-decoration-none text-success">
-              The MealDB
+              The Meal Place
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

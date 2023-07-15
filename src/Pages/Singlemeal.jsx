@@ -39,6 +39,11 @@ const Singlemeal = () => {
     setLoading(false);
   };
   useEffect(() => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
     fetchData();
   }, [mealId]);
 
@@ -60,37 +65,42 @@ const Singlemeal = () => {
         />
         <div className="mt-3 mb-3">
           <p>
-            <span className="bg-success text-white p-1 me-2 rounded-2">
+            <span className="bg-success text-white p-2 me-2 rounded-2">
               Name:{" "}
             </span>
             {meal.name}
           </p>
           <p>
-            <span className="bg-success text-white p-1 me-2 rounded-2">
+            <span className="bg-success text-white p-2 me-2 rounded-2">
               Category:{" "}
             </span>
             {meal.cat}
           </p>
           <p>
             {" "}
-            <span className="bg-success text-white p-1 me-2 rounded-2">
+            <span className="bg-success text-white p-2 me-2 rounded-2">
               Tags:{" "}
             </span>
             {meal.tags}
           </p>
           <p>
             {" "}
-            <span className="bg-success text-white p-1 me-2 rounded-2">
+            <span className="bg-success text-white p-2 me-2 rounded-2">
               Area:{" "}
             </span>
             {meal.area}
           </p>
           <p className="lh-lg">
             {" "}
-            <span className="bg-success text-white p-1 me-2 rounded-2">
+            <span className="bg-success text-white p-2 me-2 rounded-2">
               Instructions{" "}
             </span>
             {meal.instructions}
+          </p>
+          <p className="lh-lg">
+            <span className="bg-success text-white p-2 me-2 rounded-2">
+              Video Instruction :
+            </span>
           </p>
           <div className="mt-2">
             <ReactPlayer
@@ -99,6 +109,7 @@ const Singlemeal = () => {
               playing={true}
               muted={true}
               width={"100%"}
+              height={"450px"}
             />
           </div>
         </div>
