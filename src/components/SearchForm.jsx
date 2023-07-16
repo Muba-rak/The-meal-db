@@ -13,7 +13,7 @@ const SearchForm = () => {
   };
   return (
     <div className="my-3 ">
-      <form className="w-75 mx-auto" onSubmit={handleSubmit}>
+      <form className="w-50 mx-auto" onSubmit={handleSubmit}>
         <label
           htmlFor="name"
           className="form-label text-success fw-bold fs-4 text-center w-100"
