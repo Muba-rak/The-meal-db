@@ -9,6 +9,7 @@ const Singlemeal = () => {
   const finalUrl = url + mealId;
   const [loading, setLoading] = useState(true);
   const [meal, setMeal] = useState(null);
+
   const fetchData = async () => {
     setLoading(true);
     const res = await fetch(finalUrl);
@@ -51,7 +52,7 @@ const Singlemeal = () => {
     return <Loading />;
   }
   if (!meal) {
-    return <h2>NO meal to display</h2>;
+    return <h2 className="text-sucess my-5 text-center">NO meal to display</h2>;
   }
 
   return (

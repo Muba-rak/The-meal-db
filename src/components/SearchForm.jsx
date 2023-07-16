@@ -22,7 +22,7 @@ const SearchForm = () => {
         </label>
         <input
           type="text"
-          className="form-control border border-success border-2 shadow-none"
+          className="form-control border border-success border-2 shadow-none bg-success-subtle text-success fs-5"
           id="name"
           ref={inputContainer}
           onChange={searchMeal}

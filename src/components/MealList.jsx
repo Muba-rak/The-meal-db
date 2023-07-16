@@ -9,7 +9,9 @@ const MealList = () => {
     return <Loading />;
   }
   if (foods.length < 1) {
-    return <h1> No food found </h1>;
+    return (
+      <h1 className="text-success text-center my-5 "> 😢😢😢 No food found </h1>
+    );
   }
   return (
     <div className=" container d-flex flex-wrap justify-content-between align-items-center ">
