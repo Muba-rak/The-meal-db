@@ -14,7 +14,10 @@ const MealList = () => {
     );
   }
   return (
-    <div className=" container d-flex flex-wrap justify-content-between align-items-center ">
+    <div
+      className=" container d-flex flex-wrap justify-content-between align-items-center "
+      id="below"
+    >
       {foods.map((food) => {
         const { id, name, image, cat } = food;
         return (
