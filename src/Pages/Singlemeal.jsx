@@ -107,7 +107,7 @@ const Singlemeal = () => {
             <ReactPlayer
               url={meal.youtube}
               controls={true}
-              playing={true}
+              playing={false}
               muted={true}
               width={"100%"}
               height={"450px"}
