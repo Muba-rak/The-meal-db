@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { useFetch } from "./useFetch";
+import axios from "axios";
 
 const AppContext = createContext();
 export const useGlobalcontext = () => useContext(AppContext);
@@ -11,9 +11,9 @@ const AppProvider = ({ children }) => {
   const [foods, setFoods] = useState([]);
   const fetchData = async () => {
     setLoading(true);
-    const res = await fetch(`${url}${searchValue}`);
-    const data = await res.json();
-    const { meals } = data;
+    const {
+      data: { meals },
+    } = await axios(`${url}${searchValue}`);
     if (meals) {
       // get hold of the data
       const newFoods = meals.map((item) => {

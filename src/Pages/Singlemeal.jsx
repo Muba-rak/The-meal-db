@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Loading from "../components/Loading";
 import ReactPlayer from "react-player/youtube";
+import axios from "axios";
 
 const Singlemeal = () => {
   const { mealId } = useParams();
@@ -12,8 +13,7 @@ const Singlemeal = () => {
 
   const fetchData = async () => {
     setLoading(true);
-    const res = await fetch(finalUrl);
-    const data = await res.json();
+    const { data } = await axios(finalUrl);
     if (data.meals) {
       const {
         strMeal: name,
@@ -52,7 +52,7 @@ const Singlemeal = () => {
     return <Loading />;
   }
   if (!meal) {
-    return <h2 className="text-sucess my-5 text-center">NO meal to display</h2>;
+    return <h2 className="text-sucess my-5 text-center">No meal to display</h2>;
   }
 
   return (
