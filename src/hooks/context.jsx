@@ -33,11 +33,11 @@ const AppProvider = ({ children }) => {
     setLoading(false);
   };
   useEffect(() => {
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       fetchData();
     }, 3000);
 
-    return () => clearTimeout(fetchData);
+    return () => clearTimeout(timeout);
   }, [searchValue]);
 
   return (
